@@ -1,0 +1,19 @@
+.slide-bottom-enter-active,
+.slide-bottom-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+.slide-bottom-enter-from,
+.slide-bottom-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+
+.fade-in-enter-active,
+.fade-in-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+.fade-in-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

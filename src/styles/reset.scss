@@ -1,0 +1,211 @@
+@charset "utf-8";
+/*** The new CSS Reset - version 1.4.4 (last updated 22.12.2021) ***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; /* -webkit-tap-highlight-color:rgba(0,0,0,0); */
+  -ms-word-break: break-all;
+  word-break: break-all;
+}
+
+/* fix the feature of 'hidden' attribute.
+ display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+ - fix for the content editable attribute will work properly. */
+:where([contenteditable]) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  -webkit-tap-highlight-color: transparent; /* -webkit-user-select: none; */
+  -webkit-touch-callout: none;
+  text-size-adjust: 100% !important;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body,
+button,
+input,
+select,
+textarea {
+  position: relative;
+  background-color: #fff;
+  color: #000;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Helvetica Neue", Helvetica, STHeiTi,
+    "Microsoft Yahei", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+textarea {
+  white-space: revert;
+}
+input[type="button"],
+input[type="submit"] {
+  cursor: pointer;
+}
+input[type="button"] {
+  outline: none;
+  appearance: none;
+}
+input::input-placeholder {
+  color: #f0f0f0;
+}
+textarea::input-placeholder {
+  color: #f0f0f0;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+th {
+  text-align: inherit;
+}
+fieldset,
+img {
+  max-width: 100%;
+}
+abbr,
+acronym {
+  border: none;
+  font-variant: normal;
+}
+del {
+  text-decoration: line-through;
+}
+hr {
+  height: 1px;
+  border: 0;
+  background-color: #d9d9d9;
+}
+ul,
+ol,
+menu {
+  list-style: none;
+}
+input,
+textarea,
+select {
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+button,
+input {
+  border: 0;
+  background: 0;
+  outline: 0;
+  appearance: none;
+}
+a {
+  color: #000;
+  outline: 0;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus,
+*:focus {
+  outline: none;
+}
+em,
+i {
+  font-style: normal;
+}
+
+/* .clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+  overflow: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+.clear {
+  display: block;
+  clear: both;
+  overflow: hidden;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+} */

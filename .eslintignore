@@ -1,0 +1,6 @@
+node_modules
+/pre
+/dist
+*.d.ts
+/public
+/__demo__
